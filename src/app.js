@@ -5,6 +5,7 @@ const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 console.log(__dirname);
 console.log(__filename);
@@ -93,6 +94,6 @@ app.get('*', (req, res) => {
     name: 'priyanka'
   });
 });
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('server is listening on 3000');
 });
