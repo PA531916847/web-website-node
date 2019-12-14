@@ -23,7 +23,10 @@ const forecast = (lat, lang, callback) => {
           body.currently.temperature +
           'degreesout. there is a ' +
           body.currently.precipProbability +
-          '% f rain'
+          '% f rainThe high today is' +
+          body.daily.data[0].temperatureHigh +
+          ' with a low of' +
+          body.daily.data[0].temperatureLow
       );
     }
   });
